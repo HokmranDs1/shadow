@@ -14,7 +14,7 @@ from telethon.errors import (
 )
 
 # =============== CONFIG ===============
-BOT_TOKEN = "8831122238:AAFTOzdO_xtqHL85HSQLBtabcyo1B5HCQxA"
+BOT_TOKEN = "8736321086:AAFdCJOaxq4yXCtabL89MvRC9nin8BEe2zY"
 ADMIN_ID = 7722835349
 WALLET_INFO = "💳 شماره کارت: <code>6037991217102775</code>\nبنام: علیرضا منظم"
 PRICE_PER_MESSAGE = 50000
