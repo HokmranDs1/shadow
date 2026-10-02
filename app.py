@@ -657,7 +657,17 @@ if __name__ == "__main__":
     print(f"👤 Admin ID: {ADMIN_ID}")
     print(f"💰 قیمت هر پیام: {PRICE_PER_MESSAGE:,} تومان")
     print("=" * 40)
-    try:
-        bot.infinity_polling(skip_pending=True, timeout=30, long_polling_timeout=30)
-    except KeyboardInterrupt:
-        print("\n❌ ربات متوقف شد.")
+    import os
+    from flask import Flask, request
+    server = Flask(__name__)
+    server.route('/' + TOKEN, methods=['POST'])
+    def get_message():
+    	bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
+    	return "!", 200
+    	server.route("/")
+    	def webhook():
+    		bot.remove_webhook()
+    		bot.set_webhook(url="https://" + os.environ['RENDER_EXTERNAL_HOSTNAME'] + '/' + TOKEN)
+    		return "؟", 200
+    	if __name__ == "__main__":
+    		server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
