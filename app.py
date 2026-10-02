@@ -17,7 +17,7 @@ from telethon.errors import (
 BOT_TOKEN = "8831122238:AAFTOzdO_xtqHL85HSQLBtabcyo1B5HCQxA"
 ADMIN_ID = 7722835349
 WALLET_INFO = "💳 شماره کارت: <code>6037991217102775</code>\nبنام: علیرضا منظم"
-PRICE_PER_MESSAGE = 5000
+PRICE_PER_MESSAGE = 50000
 SESSIONS_DIR = "sessions"
 DB_PATH = "ads_bot.db"
 SEND_DELAY = 3
