@@ -660,7 +660,7 @@ if __name__ == "__main__":
     import os
     from flask import Flask, request
     server = Flask(__name__)
-    server.route('/' + TOKEN, methods=['POST'])
+    server.route('/' + "8736321086:AAFdCJOaxq4yXCtabL89MvRC9nin8BEe2zY", methods=['POST'])
     def get_message():
     	bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
     	return "!", 200
